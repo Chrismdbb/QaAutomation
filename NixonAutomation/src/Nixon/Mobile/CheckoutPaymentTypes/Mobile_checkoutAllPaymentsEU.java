@@ -33,9 +33,9 @@ public class Mobile_checkoutAllPaymentsEU {
 	
 		for (int i = 0; i < Payment.length; i++) {
 			
-			String url = "fr_en_";
+			String url = "FR_EN_";
 
-			Utils.videoStart("Regression", "MobileCheckout\\" + url+ Payment);
+			Utils.videoStart("Regression", "MobileCheckout\\EU\\" + url+ Payment[i]);
 
 			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/fr/en");
 			MobileUtils.MobileAddtoCart();

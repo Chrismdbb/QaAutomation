@@ -27,8 +27,12 @@ public class Mobile_checkoutAllPaymentsCA extends MobileReusableMethod {
 		Payment[2] = "Visa";
 
 		for (int i = 0; i < Payment.length; i++) {
+			
+			String url = "CA_EN";
+			
+			Utils.videoStart("Regression", "MobileCheckout\\CA\\" + url+ Payment[i]);
 
-			Utils.CheckoutStep1("https://storefront:nix2015@stg.nixon.com/ca/en");
+			Utils.CheckoutStep1("https://storefront:Nixonat701@stg.nixon.com/ca/en");
 
 			Utils.Cart2Payment("nixonautomation@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
 					"Niagara Falls", "2000", "7604056763", "Queensland");

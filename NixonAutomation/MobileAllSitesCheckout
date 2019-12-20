@@ -10,4 +10,10 @@
 <class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsEU"/>
 </classes>
 </test>
+<test name="MobileUserTests">
+<classes>
+<class name="mobileNixonRegression.MobileLogIn"/>
+<class name="mobileNixonRegression.MobileNewUser"/>
+</classes>
+</test>
 </suite>

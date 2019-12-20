@@ -17,11 +17,11 @@ public class MobileNewUser {
 		String[] Url;
 		Url = new String[5];
 
-		Url[0] = "https://storefront:nix2015@stg.nixon.com/us/en";
-		Url[1] = "https://storefront:nix2015@stg.nixon.com/ca/en";
-		Url[2] = "https://storefront:nix2015@stg.nixon.com/au/en";
-		Url[3] = "https://storefront:nix2015@stg.nixon.com/fr/fr";
-		Url[4] = "https://storefront:nix2015@stg.nixon.com/jp/ja";
+		Url[0] = "https://storefront:Nixonat701@stg.nixon.com/us/en";
+		Url[1] = "https://storefront:Nixonat701@stg.nixon.com/ca/en";
+		Url[2] = "https://storefront:Nixonat701@stg.nixon.com/au/en";
+		Url[3] = "https://storefront:Nixonat701@stg.nixon.com/fr/fr";
+		Url[4] = "https://storefront:Nixonat701@stg.nixon.com/jp/ja";
 
 		for (int i = 0; i < Url.length; i++) {
 			Utils.videoStart("Regression", "MobileNewUser\\"
