@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DeploymentSuite">
+<test name="MobileAllSitesCheckout">
+<classes>
+<class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsUS2"/>
+<class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsCA"/>
+<class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU"/>
+<class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsJP2"/>
+<class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsEU"/>
+</classes>
+</test>
+</suite>

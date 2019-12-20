@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nixon.Desktop.CheckoutAllPayments.AllRegions">
+
+<test name="CheckoutUSA">
+    <classes>
+       <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsUSA"/>
+    </classes>
+</test>
+
+<test name="CheckoutCA">
+     <classes>
+       <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsCA"/>
+     </classes>
+</test>
+
+<test name="CheckoutAU">
+     <classes>
+       <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsAU"/>
+     </classes>
+</test>
+
+<test name="CheckoutEU">
+     <classes>
+       <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsEU_FR"/>
+     </classes>
+</test>
+
+<test name="CheckoutJP">
+     <classes>
+       <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP"/>
+     </classes>
+</test>
+
+
+</suite>
+

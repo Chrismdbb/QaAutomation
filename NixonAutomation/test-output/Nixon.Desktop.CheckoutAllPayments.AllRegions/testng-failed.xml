@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Nixon.Desktop.CheckoutAllPayments.AllRegions]">
+  <test thread-count="5" name="CheckoutUSA(failed)">
+    <classes>
+      <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsUSA">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsUSA -->
+    </classes>
+  </test> <!-- CheckoutUSA(failed) -->
+  <test thread-count="5" name="CheckoutCA(failed)">
+    <classes>
+      <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsCA">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsCA -->
+    </classes>
+  </test> <!-- CheckoutCA(failed) -->
+  <test thread-count="5" name="CheckoutAU(failed)">
+    <classes>
+      <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsAU">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsAU -->
+    </classes>
+  </test> <!-- CheckoutAU(failed) -->
+  <test thread-count="5" name="CheckoutEU(failed)">
+    <classes>
+      <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsEU_FR">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsEU_FR -->
+    </classes>
+  </test> <!-- CheckoutEU(failed) -->
+  <test thread-count="5" name="CheckoutJP(failed)">
+    <classes>
+      <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP -->
+    </classes>
+  </test> <!-- CheckoutJP(failed) -->
+</suite> <!-- Failed suite [Nixon.Desktop.CheckoutAllPayments.AllRegions] -->
