@@ -35,8 +35,7 @@ public class checkoutAllPaymentsCA extends ReusableMethod {
 
 		for (int i = 0; i < Payment.length; i++) {
 
-				Utils.CheckoutStep1("https://storefront:nix2015@stg.nixon.com/ca/en");
-
+				Utils.CheckoutStep1("https://storefront:Nixonat701@stg.nixon.com/ca/en");
 				Utils.Cart2Payment("NixonAutomation+CA@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
 						"Niagara Falls", "L2G3V9", "7604056763", "Alberta");
 

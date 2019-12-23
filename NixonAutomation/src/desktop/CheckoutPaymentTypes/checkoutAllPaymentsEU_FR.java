@@ -28,7 +28,7 @@ public class checkoutAllPaymentsEU_FR extends ReusableMethod {
 
 		for (int i = 0; i < Payment.length; i++) {
 
-			Utils.CheckoutStep1("https://storefront:nix2015@stg.nixon.com/fr/fr");
+			Utils.CheckoutStep1("https://storefront:Nixonat701@stg.nixon.com/fr/en");
 
 			Utils.Cart2Payment("nixonautomation@gmail.com", "Christopher", "Barreto", "185 avenue de Pascouaou",
 					"Soorts-Hossegor", "40150", "7604056763", "Hossegor");

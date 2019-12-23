@@ -1,4 +1,4 @@
-package Nixon.Mobile.CheckoutPaymentTypes;
+\package Nixon.Mobile.CheckoutPaymentTypes;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,13 +20,14 @@ public class Mobile_checkoutAllPaymentsUS2 {
 	void test() throws Exception {
 
 		String[] Payment;
-		Payment = new String[2];
-		/*
-		 * Payment[0] = "Visa"; Payment[1] = "MasterCard"; Payment[2] =
-		 * "American Express"; Payment[3] = "Discover";
-		 */
-		Payment[0] = "Paypal";
-		Payment[1] = "AfterPay";
+		Payment = new String[6];
+		
+		Payment[0] = "Visa"; 
+		Payment[1] = "MasterCard"; 
+		Payment[2] = "American Express"; 
+		Payment[3] = "Discover";
+		Payment[4] = "Paypal";
+		Payment[5] = "AfterPay";
 
 		for (int i = 0; i < Payment.length; i++) {
 
@@ -34,27 +35,27 @@ public class Mobile_checkoutAllPaymentsUS2 {
 
 			Utils.videoStart("Regression", "MobileCheckout\\US\\" + url + Payment[i]);
 
-			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/us/en");
+			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/us/en?__siteDate=201912271000&__sourceCode=&__customerGroup=&__abTest=&__abTestSegment=&__previewID=");
 			MobileUtils.MobileAddtoCart();
 			MobileUtils.MobileCheckoutStep1("Christopher.Barreto@nixon.com", "Christopher", "Barreto",
 					"701 N. Coast Hwy", "Encinitas", "92024", "7604056763", "California");
 
 			switch (Payment[i]) {
 
-			/*
-			 * case "Visa": MobileUtils.MobileCreditCardPayment("4111111111111111", "123");
-			 * System.out.println(Payment[i]); break;
-			 * 
-			 * case "MasterCard": MobileUtils.MobileCreditCardPayment("5555555555554444",
-			 * "123"); System.out.println(Payment[i]); break;
-			 * 
-			 * case "American Express":
-			 * MobileUtils.MobileCreditCardPayment("378734493671000", "1234");
-			 * System.out.println(Payment[i]); break;
-			 * 
-			 * case "Discover": MobileUtils.MobileCreditCardPayment("6011111111111117",
-			 * "123"); System.out.println(Payment[i]); break;
-			 */
+			
+			  case "Visa": MobileUtils.MobileCreditCardPayment("4111111111111111", "123");
+			  System.out.println(Payment[i]); break;
+			  
+			  case "MasterCard": MobileUtils.MobileCreditCardPayment("5555555555554444",
+			  "123"); System.out.println(Payment[i]); break;
+			  
+			  case "American Express":
+			  MobileUtils.MobileCreditCardPayment("378734493671000", "1234");
+			  System.out.println(Payment[i]); break;
+			  
+			  case "Discover": MobileUtils.MobileCreditCardPayment("6011111111111117",
+			  "123"); System.out.println(Payment[i]); break;
+			 
 
 			case "Paypal":
 				MobileUtils.PaypalPayment("christopher.barreto+us@nixon.com", "Welcome123");

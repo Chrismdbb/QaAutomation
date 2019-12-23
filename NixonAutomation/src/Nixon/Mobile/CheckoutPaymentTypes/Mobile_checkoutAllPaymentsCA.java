@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import ReusableMethods.MobileReusableMethod;
+import ReusableMethods.MobileUtils;
 import ReusableMethods.Utils;
 
 public class Mobile_checkoutAllPaymentsCA extends MobileReusableMethod {
@@ -29,34 +30,31 @@ public class Mobile_checkoutAllPaymentsCA extends MobileReusableMethod {
 		for (int i = 0; i < Payment.length; i++) {
 			
 			String url = "CA_EN";
-			
 			Utils.videoStart("Regression", "MobileCheckout\\CA\\" + url+ Payment[i]);
-
-			Utils.CheckoutStep1("https://storefront:Nixonat701@stg.nixon.com/ca/en");
-
-			Utils.Cart2Payment("nixonautomation@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
+			
+			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/ca/en?__siteDate=201912271000&__sourceCode=&__customerGroup=&__abTest=&__abTestSegment=&__previewID=");
+			MobileUtils.MobileAddtoCart();
+			MobileUtils.MobileCheckoutStep1("nixonautomation@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
 					"Niagara Falls", "2000", "7604056763", "Queensland");
 
 			switch (Payment[i]) {
 			
 			
 			case "Visa":
-				Utils.CreditCardPayment("4111111111111111", "123");
+				MobileUtils.MobileCreditCardPayment("4111111111111111", "123");
 				break;
 			
 			case "MasterCard":
-				Utils.CreditCardPayment("5555555555554444", "123");
+				MobileUtils.MobileCreditCardPayment("5555555555554444", "123");
 				break;
 
 
 				
 			}
-
-			Utils.ConfirmationScreenshot("CheckoutAllPayments", "CA_STG_Orders", Payment[i]);
+			Utils.videoEnd();
+			MobileUtils.quitBrowser();
 
 		}
-
-
 
 	}
 }

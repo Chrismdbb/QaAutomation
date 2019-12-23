@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [DeploymentSuite]">
-  <test thread-count="5" name="DeploymentTest(failed)">
+  <test thread-count="5" name="MobileAllSitesCheckout(failed)">
     <classes>
-      <class name="Nixon.Mobile.USA.Regression.MobileNewUser">
+      <class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsCA">
         <methods>
           <include name="test"/>
         </methods>
-      </class> <!-- Nixon.Mobile.USA.Regression.MobileNewUser -->
+      </class> <!-- Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsCA -->
+      <class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsJP2">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsJP2 -->
+      <class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsEU">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsEU -->
+      <class name="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU -->
     </classes>
-  </test> <!-- DeploymentTest(failed) -->
+  </test> <!-- MobileAllSitesCheckout(failed) -->
+  <test thread-count="5" name="MobileUserTests(failed)">
+    <classes>
+      <class name="mobileNixonRegression.MobileLogIn">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- mobileNixonRegression.MobileLogIn -->
+      <class name="mobileNixonRegression.MobileNewUser">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- mobileNixonRegression.MobileNewUser -->
+    </classes>
+  </test> <!-- MobileUserTests(failed) -->
 </suite> <!-- Failed suite [DeploymentSuite] -->

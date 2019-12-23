@@ -37,7 +37,7 @@ public class Mobile_checkoutAllPaymentsEU {
 
 			Utils.videoStart("Regression", "MobileCheckout\\EU\\" + url+ Payment[i]);
 
-			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/fr/en");
+			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/fr/en?__siteDate=201912271000&__sourceCode=&__customerGroup=&__abTest=&__abTestSegment=&__previewID=");
 			MobileUtils.MobileAddtoCart();
 			MobileUtils.MobileCheckoutStep1("Christopher.Barreto@nixon.com","Christopher", "Barreto","185 avenue de Pascouaou",
 					"Soorts-Hossegor","40150","7604056763","France");

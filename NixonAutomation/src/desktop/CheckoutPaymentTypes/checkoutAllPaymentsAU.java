@@ -32,7 +32,6 @@ public class checkoutAllPaymentsAU extends ReusableMethod {
 				Payment = new String[3];
 
 				Payment[0] = "MasterCard";
-				Payment[1] = "AfterPay";
 				Payment[2] = "Visa";
 
 				for (int i = 0; i < Payment.length; i++) {

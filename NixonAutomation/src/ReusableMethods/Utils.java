@@ -193,8 +193,9 @@ public class Utils {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(By.id("inputcardNumberField")).sendKeys(ccNumber);
 
-		String value = driver.findElement(By.id("inputcardNumberField")).getAttribute("value").trim();
+		String value = driver.findElement(By.id("inputcardNumberField")).getAttribute("value").trim(); //.getAttribute("value").trim();
 		Thread.sleep(2000);
+		System.out.print(value);
 
 		if (!value.equals(ccNumber)) {
 			driver.findElement(By.id("inputcardNumberField")).clear();
@@ -222,6 +223,8 @@ public class Utils {
 		}
 
 		driver.findElement(By.cssSelector(".place-order-button")).click();
+		
+		Thread.sleep(2500);
 
 	}
 
@@ -282,16 +285,22 @@ public class Utils {
 
 		Select ccYear = new Select(driver.findElement(By.id("year")));
 		ccYear.selectByVisibleText("2022");
-
+		
+		try {
+			driver.findElement(By.xpath("//input[@value='Continue to Order Review']")).click();
+		} catch (Exception e) {
+			driver.findElement(By.xpath("//div[@id='CREDIT_CARD']/input")).click();
+		}
+		
+		
 		try {
 			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).isDisplayed();
 			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).click();
 		} catch (Exception e) {
-			driver.findElement(By.cssSelector(".place-order-button")).click();
+	
 		}
-		driver.findElement(By.xpath("//input[@value='Continue to Order Review']")).click();
-
-		driver.findElement(By.xpath("//input[@value='Place Order']")).click();
+		
+	    driver.findElement(By.xpath("//input[@value='Place Order']")).click();
 
 	}
 
