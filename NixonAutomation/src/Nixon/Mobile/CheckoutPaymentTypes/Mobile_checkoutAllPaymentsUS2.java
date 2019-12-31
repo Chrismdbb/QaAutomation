@@ -1,4 +1,4 @@
-\package Nixon.Mobile.CheckoutPaymentTypes;
+package Nixon.Mobile.CheckoutPaymentTypes;
 
 import java.util.concurrent.TimeUnit;
 
