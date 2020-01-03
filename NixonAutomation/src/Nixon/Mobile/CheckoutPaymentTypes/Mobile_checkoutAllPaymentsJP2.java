@@ -37,7 +37,7 @@ public class Mobile_checkoutAllPaymentsJP2 {
 
 			Utils.videoStart("Regression", "MobileCheckout\\JP\\" + url + Payment[i]);
 
-			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/jp/ja?__siteDate=201912271000&__sourceCode=&__customerGroup=&__abTest=&__abTestSegment=&__previewID=");
+			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/jp/ja");
 			
 			MobileUtils.MobileAddtoCart();
 			

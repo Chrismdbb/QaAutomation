@@ -33,7 +33,7 @@ import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 
 public class Utils {
-	
+
 	private static final Function visibility = null;
 
 	public static ATUTestRecorder recorder;
@@ -83,8 +83,9 @@ public class Utils {
 		if (driver.findElement(By.className("modal-close")).isDisplayed()) { // if the tag options is not displayed
 			driver.findElement(By.className("modal-close")).click();
 		}
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".level-1_item:nth-child(2) .level-1_link-text")));
-		
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.cssSelector(".level-1_item:nth-child(2) .level-1_link-text")));
+
 		WebElement subElement = driver.findElement(By.cssSelector(".level-1_item:nth-child(2) .level-1_link-text"));
 
 		action.moveToElement(subElement).perform();
@@ -99,13 +100,12 @@ public class Utils {
 																								// is not displayed
 			driver.findElement(By.cssSelector("#modal-email .modal-close")).click();
 		}
-		
+
 		Thread.sleep(2000);
-		
+
 		driver.findElement(By.cssSelector(".product-tile-image")).click();
 
-		//driver.findElement(By.xpath("//li[3]/div/div[2]/div/a/img")).click();
-		
+		// driver.findElement(By.xpath("//li[3]/div/div[2]/div/a/img")).click();
 
 		driver.findElement(By.id("add-to-cart")).click(); // check if its available and if not -- then select another
 															// swatch *******
@@ -162,8 +162,7 @@ public class Utils {
 
 		driver.findElement(By.cssSelector(".checkout-buttons > .primary-button")).click();
 		;
-		
-		
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("inputshipping-email")));
 		driver.findElement(By.id("inputshipping-email")).sendKeys(email);
 		driver.findElement(By.id("inputshipping-firstNameField")).sendKeys(firstName);
@@ -193,7 +192,7 @@ public class Utils {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(By.id("inputcardNumberField")).sendKeys(ccNumber);
 
-		String value = driver.findElement(By.id("inputcardNumberField")).getAttribute("value").trim(); //.getAttribute("value").trim();
+		String value = driver.findElement(By.id("inputcardNumberField")).getAttribute("value").trim(); // .getAttribute("value").trim();
 		Thread.sleep(2000);
 		System.out.print(value);
 
@@ -223,7 +222,7 @@ public class Utils {
 		}
 
 		driver.findElement(By.cssSelector(".place-order-button")).click();
-		
+
 		Thread.sleep(2500);
 
 	}
@@ -285,22 +284,21 @@ public class Utils {
 
 		Select ccYear = new Select(driver.findElement(By.id("year")));
 		ccYear.selectByVisibleText("2022");
-		
+
 		try {
 			driver.findElement(By.xpath("//input[@value='Continue to Order Review']")).click();
 		} catch (Exception e) {
 			driver.findElement(By.xpath("//div[@id='CREDIT_CARD']/input")).click();
 		}
-		
-		
+
 		try {
 			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).isDisplayed();
 			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).click();
 		} catch (Exception e) {
-	
+
 		}
-		
-	    driver.findElement(By.xpath("//input[@value='Place Order']")).click();
+
+		driver.findElement(By.xpath("//input[@value='Place Order']")).click();
 
 	}
 
@@ -413,20 +411,73 @@ public class Utils {
 		}
 	}
 
-	public static void allFooterSignUppossibilities(String country) throws IOException, InterruptedException {
+	public static void AlreadyRegisteredFooterNewsletterSignup()
+			throws IOException, InterruptedException {
+
+		String UsedEmail = "Christopher.Barreto@gmail.com";
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("javascript:window.scrollBy(0,2500)");
+
+		WebElement EFooterField = driver.findElement(By.id("email-alert-address"));
+		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"email-alert-signup\"]/div[3]/input"));
+
+		EFooterField.click();
+		EFooterField.sendKeys(UsedEmail);
+		
+		
+		try {
+		    driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(1) > .control-indicator")).isDisplayed();
+			driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(1) > .control-indicator")).click();
+			
+			driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(2) > .control-indicator")).isDisplayed();
+			driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(2) > .control-indicator")).click();
+			
+			Submit.click();
+			
+		} catch (Exception e) {
+		}
+
+		js.executeScript("javascript:window.scrollBy(0,50)");
+		
+		Thread.sleep(2000);
+		
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, 15);
+		 * 
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(
+		 * "dialog-container")));
+		 */
+
+	}
+
+	public static void IncorrectFormatFooterNewsletterSignup() throws IOException, InterruptedException {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("javascript:window.scrollBy(0,2500)");
+
+		WebElement EFooterField = driver.findElement(By.id("email-alert-address"));
+		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"email-alert-signup\"]/div[3]/input"));
+
+		String FakeEmail = "Christopher";
+
+		EFooterField.click();
+		EFooterField.sendKeys(FakeEmail);
+		Submit.click();
+
+		js.executeScript("javascript:window.scrollBy(0,50)");
+		
+		Thread.sleep(2000);
+		
+		EFooterField.clear();
+
+	}
+
+	public static void NewEmailFooterNewsletterSignup() throws IOException, InterruptedException {
 
 		Random rand = new Random();
 		int randomnumber = rand.nextInt(100000);
 
-		String[] TestType;
-		TestType = new String[3];
-
-		TestType[0] = "Fake Email";
-		TestType[1] = "Already Registered";
-		TestType[2] = "Correct Email Address";
-
-		String UsedEmail = "Christopher.Barreto@gmail.com";
-		String FakeEmail = "Christopher";
 		String NewEmail = "Christopher" + randomnumber + "Barreto@nixon.com";
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -435,57 +486,30 @@ public class Utils {
 		WebElement EFooterField = driver.findElement(By.id("email-alert-address"));
 		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"email-alert-signup\"]/div[3]/input"));
 
-		for (int i = 0; i < TestType.length; i++) {
-
-			if (i == 0) {
-				EFooterField.click();
-				EFooterField.sendKeys(FakeEmail);
-				Submit.click();
-
-				screenshot(country, "EmailSignup", TestType[i]);
-
-				js.executeScript("javascript:window.scrollBy(0,50)");
-
-			}
-
-			else if (i == 1) {
-				EFooterField.clear();
-				EFooterField.sendKeys(UsedEmail);
-				Submit.click();
-
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dialog-container")));
-				js.executeScript("javascript:window.scrollBy(0,50)");
-
-				screenshot(country, "EmailSignup", TestType[i]);
-
-				Thread.sleep(2000);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dialog-container")));
-
-				WebElement element = driver.findElement(By.id("dialog-container"));
-				((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'", element);
-				Thread.sleep(5000);
-
-				// driver.switchTo().frame(1);
-
-				// driver.findElement(By.cssSelector(".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close")).click();
-
-				// driver.findElement(By.xpath("//*[@id=\"ext-gen44\"]/body/div[10]/div[1]/button")).click();
-				// wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dialog-container")));
-
-			}
-
-			else if (i == 2) {
-				EFooterField.clear();
-				EFooterField.sendKeys(NewEmail);
-				Submit.click();
-
-				js.executeScript("javascript:window.scrollBy(0,50)");
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dialog-container")));
-
-				screenshot(country, "EmailSignup", TestType[i]);
-			}
-
+		EFooterField.click();
+		EFooterField.sendKeys(NewEmail);
+		Submit.click();
+		
+		try {
+		    driver.findElement(By.id("sixteenplus")).isDisplayed();
+			driver.findElement(By.id("sixteenplus")).click();
+			
+			driver.findElement(By.id("gdpragree")).isDisplayed();
+			driver.findElement(By.id("gdpragree")).click();
+			
+			Submit.click();
+			
+		} catch (Exception e) {
 		}
+		
+		js.executeScript("javascript:window.scrollBy(0,50)");
+		
+		Thread.sleep(3500);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='content-asset']/p")));
+		
 
 	}
 
@@ -502,22 +526,24 @@ public class Utils {
 				+ folder + "\\" + folderChild + "\\" + screenshot + ".png"));
 
 	}
-	
-	public static void videoStart( String folderChild, String name) throws Exception {
-	DateFormat dateFormat = new SimpleDateFormat("MM_dd_yy");
-	Date date = new Date();
-	// Created object of ATUTestRecorder
-	// Provide path to store videos and file name Format  //+dateFormat.format(date)
-	recorder = new ATUTestRecorder("C:\\Users\\christopher.barreto\\Desktop\\Automation.ScreenShots\\" + folderChild, name + dateFormat.format(date), false);
-	// To start video recording.
-	recorder.start();
+
+	public static void videoStart(String folderChild, String name) throws Exception {
+		DateFormat dateFormat = new SimpleDateFormat("MM_dd_yy");
+		Date date = new Date();
+		// Created object of ATUTestRecorder
+		// Provide path to store videos and file name Format //+dateFormat.format(date)
+		recorder = new ATUTestRecorder(
+				"C:\\Users\\christopher.barreto\\Desktop\\Automation.ScreenShots\\" + folderChild,
+				name + dateFormat.format(date), false);
+		// To start video recording.
+		recorder.start();
 	}
-	
-	public static void videoEnd() throws Exception{
-	recorder.stop();
-	
+
+	public static void videoEnd() throws Exception {
+		recorder.stop();
+
 	}
-	
+
 	public static void RegisteredSignIn(String userName, String password) {
 		driver.findElement(By.cssSelector(".user-account-login_text-v2")).click();
 
@@ -530,7 +556,7 @@ public class Utils {
 		driver.findElement(By.cssSelector(".btn-primary:nth-child(2)")).click();
 
 	}
-	
+
 	public static void CheckTitle(String Title) {
 		String ActualTitle = driver.getTitle();
 		String url = driver.getCurrentUrl();
@@ -538,9 +564,7 @@ public class Utils {
 		if (ActualTitle.equals(Title)) {
 			System.out.println("Page" + Title + " is up + Registered Log on have passed");
 		}
-		
 
 	}
-	
 
 }

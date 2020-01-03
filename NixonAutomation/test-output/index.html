@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\christopher.barreto\AppData\Local\Temp\testng-eclipse--942603083\testng-customsuite.xml</span>
+                    <span>C:\Users\christopher.barreto\AppData\Local\Temp\testng-eclipse-1001712116\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU" hash-for-method="test">test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Nixon.Desktop.NewsletterSignup.FooterSignUp2" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,7 +120,7 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU</span>
+              <span class="class-name">Nixon.Desktop.NewsletterSignup.FooterSignUp2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,9 +128,27 @@
                   <a name="test">
                   </a> <!-- test -->
                   <span class="method-name">test</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at ReusableMethods.Utils.APPayment(Utils.java:346)
-	at Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU.test(Mobile_checkoutAllPaymentsAU.java:55)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=79.0.3945.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;CHRISTOPHERBARR&apos;, ip: &apos;10.0.75.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 35dadb1a149e1c6aa67cefd2318cf7ab
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at ReusableMethods.Utils.OpenBrowser(Utils.java:54)
+	at Nixon.Desktop.NewsletterSignup.FooterSignUp2.test(FooterSignUp2.java:35)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -165,7 +183,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\christopher.barreto\AppData\Local\Temp\testng-eclipse--942603083\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\christopher.barreto\AppData\Local\Temp\testng-eclipse-1001712116\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -174,7 +192,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU&quot;/&gt;
+      &lt;class name=&quot;Nixon.Desktop.NewsletterSignup.FooterSignUp2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -217,13 +235,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
-data.setCell(0, 2, 'Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU')
-data.setCell(0, 3, 232905);
+data.setCell(0, 2, 'Nixon.Desktop.NewsletterSignup.FooterSignUp2')
+data.setCell(0, 3, 23393);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -249,7 +267,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Nixon.Mobile.CheckoutPaymentTypes.Mobile_checkoutAllPaymentsAU</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Nixon.Desktop.NewsletterSignup.FooterSignUp2</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>

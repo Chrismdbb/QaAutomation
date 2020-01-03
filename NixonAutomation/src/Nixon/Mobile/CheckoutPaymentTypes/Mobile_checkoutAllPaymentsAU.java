@@ -36,7 +36,7 @@ public class Mobile_checkoutAllPaymentsAU  {
 
 			Utils.videoStart("Regression", "MobileCheckout\\AU\\" + url+ Payment[i]);
 
-			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/au/en?__siteDate=201912271000&__sourceCode=&__customerGroup=&__abTest=&__abTestSegment=&__previewID=");
+			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/au/en");
 			MobileUtils.MobileAddtoCart();
 			MobileUtils.MobileCheckoutStep1("Christopher.Barreto@nixon.com","Christopher", "Barreto","701 N. Coast Hwy",
 					"Syndey","2000","7604056763","Queensland");

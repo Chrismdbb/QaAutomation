@@ -32,7 +32,7 @@ public class Mobile_checkoutAllPaymentsCA extends MobileReusableMethod {
 			String url = "CA_EN";
 			Utils.videoStart("Regression", "MobileCheckout\\CA\\" + url+ Payment[i]);
 			
-			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/ca/en?__siteDate=201912271000&__sourceCode=&__customerGroup=&__abTest=&__abTestSegment=&__previewID=");
+			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/ca/en");
 			MobileUtils.MobileAddtoCart();
 			MobileUtils.MobileCheckoutStep1("nixonautomation@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
 					"Niagara Falls", "2000", "7604056763", "Queensland");
