@@ -10,15 +10,6 @@
       </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsUSA -->
     </classes>
   </test> <!-- CheckoutUSA(failed) -->
-  <test thread-count="5" name="CheckoutCA(failed)">
-    <classes>
-      <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsCA">
-        <methods>
-          <include name="test"/>
-        </methods>
-      </class> <!-- desktop.CheckoutPaymentTypes.checkoutAllPaymentsCA -->
-    </classes>
-  </test> <!-- CheckoutCA(failed) -->
   <test thread-count="5" name="CheckoutAU(failed)">
     <classes>
       <class name="desktop.CheckoutPaymentTypes.checkoutAllPaymentsAU">

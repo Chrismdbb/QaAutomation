@@ -20,7 +20,6 @@ public class checkoutAllPaymentsUSA {
 		Payment[1] = "MasterCard";
 		Payment[2] = "American Express";
 		Payment[3] = "Discover";
-
 		Payment[4] = "Paypal";
 		Payment[5] = "AfterPay";
 
@@ -52,11 +51,12 @@ public class checkoutAllPaymentsUSA {
 				Utils.CreditCardPayment("6011111111111117", "123");
 				System.out.println(Payment[i]);
 				break;
-
+				
 			case "Paypal":
 				Utils.PaypalPayment();
 				System.out.println(Payment[i]);
 				break;
+			
 
 			case "AfterPay":
 				Utils.APPayment("Chrismdbb@gmail.com", "!Panem@1991");

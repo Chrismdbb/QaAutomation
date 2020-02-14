@@ -2,32 +2,30 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23417" started-at="2020-01-03T01:12:34Z" finished-at="2020-01-03T01:12:58Z">
+  <suite name="Default suite" duration-ms="81570" started-at="2020-02-14T00:26:11Z" finished-at="2020-02-14T00:27:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23417" started-at="2020-01-03T01:12:34Z" finished-at="2020-01-03T01:12:58Z">
-      <class name="Nixon.Desktop.NewsletterSignup.FooterSignUp2">
-        <test-method status="FAIL" signature="test()[pri:0, instance:Nixon.Desktop.NewsletterSignup.FooterSignUp2@396a51ab]" name="test" duration-ms="23393" started-at="2020-01-03T01:12:34Z" finished-at="2020-01-03T01:12:58Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+    <test name="Default test" duration-ms="81570" started-at="2020-02-14T00:26:11Z" finished-at="2020-02-14T00:27:33Z">
+      <class name="desktop.CheckoutPaymentTypes.desktopKlarnaPayments">
+        <test-method status="FAIL" signature="test()[pri:0, instance:desktop.CheckoutPaymentTypes.desktopKlarnaPayments@5419f379]" name="test" duration-ms="81527" started-at="2020-02-14T00:26:11Z" finished-at="2020-02-14T00:27:33Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
+              <![CDATA[element not interactable
+  (Session info: chrome=80.0.3987.100)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'CHRISTOPHERBARR', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 35dadb1a149e1c6aa67cefd2318cf7ab]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.100, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55139}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 50088c9347a23a6f5add4a12acec2f98]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=80.0.3987.100)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'CHRISTOPHERBARR', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 35dadb1a149e1c6aa67cefd2318cf7ab
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.100, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55139}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 50088c9347a23a6f5add4a12acec2f98
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -38,9 +36,10 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-at ReusableMethods.Utils.OpenBrowser(Utils.java:54)
-at Nixon.Desktop.NewsletterSignup.FooterSignUp2.test(FooterSignUp2.java:35)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at ReusableMethods.Utils.Klarna(Utils.java:625)
+at desktop.CheckoutPaymentTypes.desktopKlarnaPayments.test(desktopKlarnaPayments.java:87)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -68,11 +67,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-      </class> <!-- Nixon.Desktop.NewsletterSignup.FooterSignUp2 -->
+      </class> <!-- desktop.CheckoutPaymentTypes.desktopKlarnaPayments -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

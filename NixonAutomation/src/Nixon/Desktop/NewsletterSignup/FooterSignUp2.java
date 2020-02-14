@@ -21,7 +21,7 @@ public class FooterSignUp2 {
 
 		for (int i = 0; i < Country.length; i++) {
 		
-			if(i<4)	
+			if(!Country[i].contentEquals(Country[4]))	
 			
 			Utils.videoStart("Regression", "\\FooterNewsletter\\" + Country[i]);	
 			
@@ -53,10 +53,16 @@ public class FooterSignUp2 {
 				Utils.OpenBrowser("https://storefront:Nixonat701@stg.nixon.com/" + Country[i] + "/ja");
 			
 				Utils.NewEmailFooterNewsletterSignup();
-			
+				
+				Thread.sleep(1000);
+				
+				Utils.videoEnd();	
+				
+				Thread.sleep(1000);
+				
 				Utils.quitbrowser();
 			
-				Utils.videoEnd();	
+				
 			}	
 	}
 }

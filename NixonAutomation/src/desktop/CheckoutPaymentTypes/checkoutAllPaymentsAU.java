@@ -31,9 +31,11 @@ public class checkoutAllPaymentsAU extends ReusableMethod {
 				String[] Payment;
 				Payment = new String[3];
 
-				Payment[0] = "MasterCard";
-				Payment[2] = "Visa";
-
+				Payment[0] = "Visa";
+				Payment[1] = "MasterCard";
+				Payment[2] = "AfterPay";
+				
+				
 				for (int i = 0; i < Payment.length; i++) {
 					
 					
@@ -41,8 +43,8 @@ public class checkoutAllPaymentsAU extends ReusableMethod {
 
 					Utils.CheckoutStep1("https://storefront:Nixonat701@stg.nixon.com/au/en");
 
-					Utils.Cart2Payment("nixonautomation@gmail.com", "Christopher", "Barreto", "3668 Harvard",
-							"NT", "2000", "7604056763", "Queensland");
+					Utils.Cart2Payment("nixonautomation@gmail.com", "Christopher", "Barreto", "1/9 Ramley Dr.",
+							"Burleigh Heads", "4220", "7604056763", "Queensland");
 
 					switch (Payment[i]) {
 					

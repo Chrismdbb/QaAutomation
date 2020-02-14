@@ -48,22 +48,22 @@ public class checkoutAllPaymentsJP extends ReusableMethod {
 
 			switch (Payment[i]) {
 			case "Visa":
-				Utils.CreditCardPayment("4111111111111111", "123");
+				Utils.CreditCardPaymentInternational("4111111111111111", "123");
 				System.out.println("Visa");
 				break;
 
 			case "MasterCard":
-				Utils.CreditCardPayment("5555555555554444",  "123");
+				Utils.CreditCardPaymentInternational("5555555555554444",  "123");
 				System.out.println("MC");
 				break;
 
 			case "American Express":
-				Utils.CreditCardPayment("341111111111111", "1234");
+				Utils.CreditCardPaymentInternational("341111111111111", "1234");
 				System.out.println("Amex");
 				break;
 
 			case "JCB":
-				Utils.CreditCardPayment("30000000000111", "123");
+				Utils.CreditCardPaymentInternational("30000000000111", "123");
 				System.out.println("JCB");
 				break;
 

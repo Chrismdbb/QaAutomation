@@ -66,7 +66,7 @@ public class Utils {
 
 	public static void CheckoutStep1(String Url) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\christopher.barreto\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\christopher.barreto\\Drivers\\chromedriver80.exe");
 		driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
@@ -109,6 +109,10 @@ public class Utils {
 
 		driver.findElement(By.id("add-to-cart")).click(); // check if its available and if not -- then select another
 															// swatch *******
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("add-to-cart")).click();
+		
 		Thread.sleep(2000);
 
 		driver.findElement(By.id("mini-cart")).click();
@@ -316,17 +320,23 @@ public class Utils {
 
 		driver.findElement(By.id("password")).sendKeys("Welcome123");
 		driver.findElement(By.id("btnLogin")).click();
-
-		Thread.sleep(10000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("button")));
-
-		Thread.sleep(10000); //// input[@id='confirmButtonTop']
-		driver.findElement(By.id("button")).click();
+		
+		Thread.sleep(5000); //// input[@id='confirmButtonTop']
+		WebElement Continue = driver.findElement(By.className("CheckoutButton_buttonWrapper_2VloF"));
+		Thread.sleep(2000);
+		action.moveToElement(Continue).perform();
+		
+		try{driver.findElement(By.className("CheckoutButton_buttonWrapper_2VloF")).click();
+		}
+		catch (Exception e) {
+			driver.findElement(By.id("confirmButtonTop")).click();	
+		}
 		Thread.sleep(5000);
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Place
 		// Order']"))).click();
 		// driver.findElement(By.xpath("//input[@value='Place Order']")).click();
-		driver.findElement(By.id("confirmButtonTop")).click();
+		//driver.findElement(By.id("confirmButtonTop")).click();
+		
 
 		try { // driver.findElement(By.className("terms-conditions-form")).click();
 			driver.findElement(By.cssSelector(".terms-conditions-form  .control-indicator")).click();
@@ -418,6 +428,8 @@ public class Utils {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("javascript:window.scrollBy(0,2500)");
+		
+		Thread.sleep(2500);
 
 		WebElement EFooterField = driver.findElement(By.id("email-alert-address"));
 		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"email-alert-signup\"]/div[3]/input"));
@@ -455,6 +467,8 @@ public class Utils {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("javascript:window.scrollBy(0,2500)");
+		
+		Thread.sleep(2500);
 
 		WebElement EFooterField = driver.findElement(By.id("email-alert-address"));
 		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"email-alert-signup\"]/div[3]/input"));
@@ -482,6 +496,8 @@ public class Utils {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("javascript:window.scrollBy(0,2500)");
+		
+		Thread.sleep(2500);
 
 		WebElement EFooterField = driver.findElement(By.id("email-alert-address"));
 		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"email-alert-signup\"]/div[3]/input"));
@@ -491,16 +507,17 @@ public class Utils {
 		Submit.click();
 		
 		try {
-		    driver.findElement(By.id("sixteenplus")).isDisplayed();
-			driver.findElement(By.id("sixteenplus")).click();
+		    driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(1) > .control-indicator")).isDisplayed();
+			driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(1) > .control-indicator")).click();
 			
-			driver.findElement(By.id("gdpragree")).isDisplayed();
-			driver.findElement(By.id("gdpragree")).click();
+			driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(2) > .control-indicator")).isDisplayed();
+			driver.findElement(By.cssSelector(".email-sign-up-submit-container > .control:nth-child(2) > .control-indicator")).click();
 			
 			Submit.click();
 			
 		} catch (Exception e) {
 		}
+
 		
 		js.executeScript("javascript:window.scrollBy(0,50)");
 		
@@ -566,5 +583,55 @@ public class Utils {
 		}
 
 	}
+	
+	public static void Klarna(String dobID) throws InterruptedException {
+		try {driver.findElement(By.xpath("//span[contains(.,'Pay later')]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.cssSelector(".continue-klarna-payment")).click();
+		Thread.sleep(3000);
+		}catch (Exception e) {}
+		
+		
+		try {
+			 driver.switchTo().frame(6);
+			driver.findElement(By.id("purchase-approval-date-of-birth")).isDisplayed();
+		     Thread.sleep(2000);
+			 driver.findElement(By.id("purchase-approval-date-of-birth")).sendKeys(dobID);
+		     driver.findElement(By.id("purchase-approval-continue")).click();}
+		catch(Exception e) {}
+		
+		try {
+			 driver.findElement(By.name("nationalIdentificationNumber")).isDisplayed(); 
+			 Thread.sleep(2000);
+			 driver.findElement(By.id("purchase-approval-national-identification-number")).sendKeys(dobID);		
+			 driver.findElement(By.id("purchase-approval-continue")).click();}
+		catch(Exception e) {}
+		
+	  /*	if (driver.findElement(By.id("purchase-approval-date-of-birth")).isDisplayed())
+		   {driver.switchTo().frame(6);
+			driver.findElement(By.id("purchase-approval-date-of-birth")).sendKeys(dobID);
+		    driver.findElement(By.id("purchase-approval-continue")).click();
+		   }
+		
+		if(driver.findElement(By.id("purchase-approval-national-identification-number")).isDisplayed()) {
+			driver.switchTo().frame(6);
+		   driver.findElement(By.id("purchase-approval-national-identification-number")).sendKeys(dobID);		
+		   driver.findElement(By.id("purchase-approval-continue")).click();
+		}*/
+		Thread.sleep(10000);
+		
+		   driver.switchTo().defaultContent();
+			
+		    driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).isDisplayed();
+			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).click();
 
+		driver.findElement(By.cssSelector(".place-order-button")).click();
 }
+	public static void Scroll() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("javascript:window.scrollBy(0,15)");
+	}
+	
+	}
+
+

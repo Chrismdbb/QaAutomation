@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 05 10:57:14 PST 2019</td>
+<td>Started on:</td><td>Wed Jan 22 11:52:19 PST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18202 ms)</td>
+<tr><td>Total time:</td><td>60 seconds (60267 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,53 +76,21 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP.test()'><b>test</b><br>Test class: desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.level-1_item:nth-child(1) .level-2_item:nth-child(4) .level-3_item:nth-child(1)  .label-text&quot;}
-  (Session info: chrome=78.0.3904.70)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;CHRISTOPHERBARR&apos;, ip: &apos;10.5.2.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: dadef39d2bf9f4df6995f797e8575482
-*** Element info: {Using=css selector, value=.level-1_item:nth-child(1) .level-2_item:nth-child(4) .level-3_item:nth-child(1)  .label-text}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at ReusableMethods.Utils.CheckoutStep1(Utils.java:87)
-	at desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP.test(checkoutAllPaymentsJP.java:44)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace414225167", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace414225167'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.level-1_item:nth-child(1) .level-2_item:nth-child(4) .level-3_item:nth-child(1)  .label-text&quot;}
-  (Session info: chrome=78.0.3904.70)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+System info: host: &apos;CHRISTOPHERBARR&apos;, ip: &apos;10.0.75.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:48)
+	at ReusableMethods.Utils.CreditCardPaymentInternational(Utils.java:286)
+	at desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP.test(checkoutAllPaymentsJP.java:51)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace311487784", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace311487784'><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;CHRISTOPHERBARR&apos;, ip: &apos;10.5.2.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CHRIST~1.BAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: dadef39d2bf9f4df6995f797e8575482
-*** Element info: {Using=css selector, value=.level-1_item:nth-child(1) .level-2_item:nth-child(4) .level-3_item:nth-child(1)  .label-text}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at ReusableMethods.Utils.CheckoutStep1(Utils.java:87)
-	at desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP.test(checkoutAllPaymentsJP.java:44)
+System info: host: &apos;CHRISTOPHERBARR&apos;, ip: &apos;10.0.75.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:48)
+	at ReusableMethods.Utils.CreditCardPaymentInternational(Utils.java:286)
+	at desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP.test(checkoutAllPaymentsJP.java:51)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -149,7 +117,7 @@ Session ID: dadef39d2bf9f4df6995f797e8575482
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>18</td>
+<td>60</td>
 <td>desktop.CheckoutPaymentTypes.checkoutAllPaymentsJP@604ed9f0</td></tr>
 </table><p>
 </body>
