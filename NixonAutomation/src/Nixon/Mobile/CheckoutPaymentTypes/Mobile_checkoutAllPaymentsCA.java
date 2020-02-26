@@ -21,11 +21,11 @@ public class Mobile_checkoutAllPaymentsCA extends MobileReusableMethod {
 	void test() throws Exception {
 
 		String[] Payment;
-		Payment = new String[3];
+		Payment = new String[2];
 
-		Payment[0] = "MasterCard";
-		Payment[1] = "AfterPay";
-		Payment[2] = "Visa";
+		Payment[0] = "Visa";
+		Payment[1] = "MasterCard";
+		//Payment[2] = "Paypal";
 
 		for (int i = 0; i < Payment.length; i++) {
 			
@@ -34,8 +34,8 @@ public class Mobile_checkoutAllPaymentsCA extends MobileReusableMethod {
 			
 			MobileUtils.MobileTestiPhone("https://storefront:Nixonat701@stg.nixon.com/ca/en");
 			MobileUtils.MobileAddtoCart();
-			MobileUtils.MobileCheckoutStep1("nixonautomation@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
-					"Niagara Falls", "2000", "7604056763", "Queensland");
+			MobileUtils.MobileCheckoutStep1("NixonAutomation+CA@gmail.com", "Christopher", "Barreto", "701 S. coast Highway",
+					"Niagara Falls", "L2G3V9", "7604056763", "Alberta");
 
 			switch (Payment[i]) {
 			

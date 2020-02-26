@@ -29,7 +29,7 @@ public class MobileUtils {
 
 	// sets the size of the emulator/viewport
 	public static void MobileTestiPhone(String Url) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\christopher.barreto\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\christopher.barreto\\Drivers\\chromedriver80.exe");
 
 		Map<String, String> mobileEmulation = new HashMap<>();
 		mobileEmulation.put("deviceName", "iPhone 6/7/8 Plus");
@@ -144,7 +144,7 @@ public class MobileUtils {
 		Actions action = new Actions(driver);
 
 		Thread.sleep(8000);
-		if (driver.findElement(By.className("exit-email-sign-up-input-container")).isDisplayed()) { // if the tag
+		if (driver.findElement(By.className("modal-close")).isDisplayed()) { // if the tag
 
 			Thread.sleep(5000);
 			action.moveToElement(driver.findElement((By.className("modal-close"))));
@@ -318,10 +318,10 @@ public class MobileUtils {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		Thread.sleep(10000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("button")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("payment-submit-btn")));
 
 		Thread.sleep(10000); //// input[@id='confirmButtonTop']
-		driver.findElement(By.id("button")).click();
+		driver.findElement(By.id("payment-submit-btn")).click();
 		Thread.sleep(5000);
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Place
 		// Order']"))).click();
@@ -344,8 +344,9 @@ public class MobileUtils {
 		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.xpath("//div[2]/div[3]/div[1]/label/span[1]")).click();
-
+		//driver.findElement(By.xpath("//div[2]/div[3]/div[1]/label/span[1]")).click();
+		driver.findElement(By.xpath("//div[2]/div[3]/div/label/span")).click();
+		
 		driver.findElement(By.id("test_afterpayContinue")).click();
 
 

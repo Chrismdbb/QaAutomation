@@ -24,9 +24,9 @@ public class Mobile_checkoutAllPaymentsAU  {
 		String[] Payment;
 		Payment = new String[3];
 		
-		Payment[0] = "Visa";
-		Payment[1] = "MasterCard";
-		Payment[2] = "AfterPay";
+		Payment[0] = "AfterPay";
+		Payment[1] = "Visa";
+		Payment[2] = "MasterCard";
 		
 		
 	
@@ -43,16 +43,16 @@ public class Mobile_checkoutAllPaymentsAU  {
 			
 			switch (Payment[i]) {
 			
+			case "AfterPay":
+				Utils.APPayment("Christopher.Barreto@nixon.com", "!Panem@1991");
+				break;
+			
 			case "Visa":
 				MobileUtils.MobileCreditCardPayment("4111 1111 1111 1111", "123");
 				break;
 			
 			case "MasterCard":
 				MobileUtils.MobileCreditCardPayment("5555555555554444", "123");
-				break;
-
-			case "AfterPay":
-				Utils.APPayment("Christopher.Barreto@nixon.com", "!Panem@1991");
 				break;
 				
 			
