@@ -45,15 +45,15 @@ public class Mobile_checkoutAllPaymentsEU {
 			switch (Payment[i]) {
 			
 			case "Visa":
-				MobileUtils.MobileCreditCardPayment("4111 1111 1111 1111", "123");
+				MobileUtils.MobileCreditCardPaymentJPEU("4111 1111 1111 1111", "123");
 				break;
 			
 			case "MasterCard":
-				MobileUtils.MobileCreditCardPayment("5555555555554444", "123");
+				MobileUtils.MobileCreditCardPaymentJPEU("5555555555554444", "123");
 				break;
 
 			case "American Express":
-				MobileUtils.MobileCreditCardPayment("378734493671000", "1234");
+				MobileUtils.MobileCreditCardPaymentJPEU("378734493671000", "1234");
 				System.out.println(Payment[i]);
 				break;
 				
@@ -65,7 +65,7 @@ public class Mobile_checkoutAllPaymentsEU {
 			
 				
 			}
-			
+			MobileUtils.MobileOrderConfirmation();
 			Utils.videoEnd();
 			MobileUtils.quitBrowser();
 			

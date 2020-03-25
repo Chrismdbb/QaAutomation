@@ -86,13 +86,17 @@ public class Utils {
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.cssSelector(".level-1_item:nth-child(2) .level-1_link-text")));
 
-		WebElement subElement = driver.findElement(By.cssSelector(".level-1_item:nth-child(2) .level-1_link-text"));
+		WebElement subElement = driver.findElement(By.cssSelector(".level-1_item:nth-child(1) .level-1_link-text"));
 
 		action.moveToElement(subElement).perform();
-
-		driver.findElement(By.cssSelector(
-				".level-1_item:nth-child(2) .level-2_item:nth-child(3) .level-3_item:nth-child(2)  .label-text"))
+		//a[contains(.,'Shop All')]
+		
+		driver.findElement(By.xpath(
+				"//a[contains(.,'Shop All')]"))
 				.click();
+		
+		//driver.findElement(By.cssSelector(".level-1_item:nth-child(2) .level-2_item:nth-child(3) .level-3_item:nth-child(2) "
+			//	+ " .label-text")).click();
 
 		Thread.sleep(10000);
 
@@ -107,11 +111,12 @@ public class Utils {
 
 		// driver.findElement(By.xpath("//li[3]/div/div[2]/div/a/img")).click();
 
-		driver.findElement(By.id("add-to-cart")).click(); // check if its available and if not -- then select another
-															// swatch *******
-		Thread.sleep(2000);
-		
 		driver.findElement(By.id("add-to-cart")).click();
+			Thread.sleep(2000);
+			
+			driver.findElement(By.id("add-to-cart")).click();
+			
+			Thread.sleep(2000);	
 		
 		Thread.sleep(2000);
 
@@ -296,8 +301,8 @@ public class Utils {
 		}
 
 		try {
-			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).isDisplayed();
-			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).click();
+			driver.findElement(By.cssSelector("terms-conditions-form")).isDisplayed();
+			driver.findElement(By.cssSelector(".terms-conditions-form")).click();
 		} catch (Exception e) {
 
 		}

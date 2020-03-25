@@ -126,9 +126,11 @@ public class MobileUtils {
 
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-		if (driver.findElement(By.className("modal-close")).isDisplayed()) { // if the tag options is not displayed
-			driver.findElement(By.className("modal-close")).click();
+		
+		Thread.sleep(5000);
+		
+		if (driver.findElement(By.cssSelector(".js-privacy-accept")).isDisplayed()) { // if the tag options is not displayed
+			driver.findElement(By.cssSelector(".js-privacy-accept")).click();
 		}
 
 		Thread.sleep(2000);
@@ -143,7 +145,7 @@ public class MobileUtils {
 
 		Actions action = new Actions(driver);
 
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		if (driver.findElement(By.className("modal-close")).isDisplayed()) { // if the tag
 
 			Thread.sleep(5000);
@@ -164,8 +166,9 @@ public class MobileUtils {
 		action.moveToElement(Button);
 
 		driver.findElement(By.id("add-to-cart")).click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driver.navigate().refresh();
+		Thread.sleep(6000);
 		driver.findElement(By.id("add-to-cart")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.id("mini-cart")).click();
@@ -283,9 +286,30 @@ public class MobileUtils {
 		}
 
 			Thread.sleep(3000);
-		    driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).isDisplayed();
-			driver.findElement(By.cssSelector(".terms-conditions-form .control-indicator")).click();
+			
+
+			
+			
 		
+		
+		
+		try {
+		WebElement element = driver.findElement(By.linkText("Terms and Conditions"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].style.visibility='hidden'", element);
+		Thread.sleep(5000);} catch (Exception e) {}
+		
+		System.out.println("passed");
+		
+		/*
+		 * WebElement box =
+		 * driver.findElement(By.cssSelector(".terms-conditions-form .checkbox  label"))
+		 * ; box.click();
+		 */
+		
+		try {
+			driver.findElement(By.xpath("//div[@id='orderReview']/div[2]/div/div[3]/div/div/label/span")).click();
+		} catch(Exception e) {};
 		     driver.findElement(By.cssSelector(".place-order-button")).click();
 	}
 
@@ -318,6 +342,7 @@ public class MobileUtils {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		Thread.sleep(10000);
+		Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("payment-submit-btn")));
 
 		Thread.sleep(10000); //// input[@id='confirmButtonTop']

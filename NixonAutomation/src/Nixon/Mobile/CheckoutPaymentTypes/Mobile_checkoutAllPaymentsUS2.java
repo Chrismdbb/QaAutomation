@@ -22,12 +22,13 @@ public class Mobile_checkoutAllPaymentsUS2 {
 		String[] Payment;
 		Payment = new String[6];
 		
-		Payment[0] = "Visa"; 
-		Payment[1] = "MasterCard"; 
-		Payment[2] = "American Express"; 
-		Payment[3] = "Discover";
-		Payment[4] = "Paypal";
-		Payment[5] = "AfterPay";
+		
+		  Payment[0] = "Visa"; 
+		  Payment[1] = "MasterCard"; 
+		  Payment[2] ="American Express";
+		  Payment[3] = "Discover";
+		  Payment[4] = "Paypal";
+		  Payment[5] = "AfterPay";
 
 		for (int i = 0; i < Payment.length; i++) {
 
@@ -43,6 +44,7 @@ public class Mobile_checkoutAllPaymentsUS2 {
 			switch (Payment[i]) {
 
 			
+			
 			  case "Visa": MobileUtils.MobileCreditCardPayment("4111111111111111", "123");
 			  System.out.println(Payment[i]); break;
 			  
@@ -52,6 +54,7 @@ public class Mobile_checkoutAllPaymentsUS2 {
 			  case "American Express":
 			  MobileUtils.MobileCreditCardPayment("378734493671000", "1234");
 			  System.out.println(Payment[i]); break;
+			 
 			  
 			  case "Discover": MobileUtils.MobileCreditCardPayment("6011111111111117",
 			  "123"); System.out.println(Payment[i]); break;
