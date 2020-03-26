@@ -44,15 +44,19 @@ public class Mobile_checkoutAllPaymentsAU  {
 			switch (Payment[i]) {
 			
 			case "AfterPay":
-				Utils.APPayment("Christopher.Barreto@nixon.com", "!Panem@1991");
+				MobileUtils.APPayment("christopher.Barreto@nixon.com", "!Panem@1991");
+				System.out.println(Payment[i]);
 				break;
+
 			
 			case "Visa":
 				MobileUtils.MobileCreditCardPayment("4111 1111 1111 1111", "123");
+				System.out.println(Payment[i]);
 				break;
 			
 			case "MasterCard":
 				MobileUtils.MobileCreditCardPayment("5555555555554444", "123");
+				System.out.println(Payment[i]);
 				break;
 				
 			
