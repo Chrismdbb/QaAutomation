@@ -342,11 +342,19 @@ public class MobileUtils {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		Thread.sleep(10000);
-		Thread.sleep(5000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("payment-submit-btn")));
+		
+		try { driver.findElement(By.id("acceptAllButton")).click();}
+		catch (Exception e) {}
+		
+		Thread.sleep(10000);
+		
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("payment-submit-btn")));
 
 		Thread.sleep(10000); //// input[@id='confirmButtonTop']
-		driver.findElement(By.id("payment-submit-btn")).click();
+		try{driver.findElement(By.id("payment-submit-btn")).click();}
+		catch (Exception e) {
+			driver.findElement(By.id("button")).click();	
+		}
 		Thread.sleep(5000);
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Place
 		// Order']"))).click();
@@ -369,11 +377,14 @@ public class MobileUtils {
 		
 		Thread.sleep(5000);
 		
-		//driver.findElement(By.xpath("//div[2]/div[3]/div[1]/label/span[1]")).click();
-		driver.findElement(By.xpath("//div[2]/div[3]/div/label/span")).click();
-		
+		//driver.findElement(By.id("paymentMethod-AFTERPAY_PBI")).click();
+		try{ 
+			driver.findElement(By.xpath("//div[2]/div[3]/div/label/span")).click();
+		} catch(Exception e) {
+			driver.findElement(By.cssSelector(".grid-cell:nth-child(2) > .radio-input span")).click();
+		}
 		driver.findElement(By.id("test_afterpayContinue")).click();
-
+		
 
 		Thread.sleep(5000);
 		driver.findElement(By.name("email")).clear();
